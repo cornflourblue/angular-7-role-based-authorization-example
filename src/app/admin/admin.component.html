@@ -1,0 +1,8 @@
+﻿<h1>Admin</h1>
+<p>This page can only be accessed by administrators.</p>
+<div>
+    All users from secure (admin only) api end point:
+    <ul>
+        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+    </ul>
+</div>
