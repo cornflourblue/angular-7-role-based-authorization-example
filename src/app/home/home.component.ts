@@ -4,7 +4,7 @@ import { first } from 'rxjs/operators';
 import { User } from '@/_models';
 import { UserService, AuthenticationService } from '@/_services';
 
-@Component({templateUrl: 'home.component.html'})
+@Component({ templateUrl: 'home.component.html' })
 export class HomeComponent {
     currentUser: User;
     userFromApi: User;
@@ -17,7 +17,7 @@ export class HomeComponent {
     }
 
     ngOnInit() {
-        this.userService.getById(this.currentUser.id).pipe(first()).subscribe(user => { 
+        this.userService.getById(this.currentUser.id).pipe(first()).subscribe(user => {
             this.userFromApi = user;
         });
     }
